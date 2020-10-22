@@ -1,0 +1,51 @@
+.header {
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: $mobile-menu-height;
+  background-color: $color-purple;
+  border-bottom: 1px solid $color-opacity;
+
+  & &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  & &__logo {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+
+    img, svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @include mq('tablet') {
+    position: absolute;
+    height: $tablet-menu-height;
+    background-color: transparent;
+
+    & &__logo {
+      width: 64px;
+      height: 64px;
+    }
+
+    & &__menu {
+      display: block;
+      width: 77%;
+    }
+  }
+
+  @include mq('desktop') {
+    & &__content {
+      max-width: 1440px;
+      padding: 0 16px;
+    }
+  }
+}

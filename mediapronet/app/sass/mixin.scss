@@ -1,0 +1,35 @@
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin font-source(
+  $size-mobile: false,
+  $size-tablet: false,
+  $size-desktop: false,
+  $weight: false,
+  $colour: false,
+  $lh: false
+) {
+  @if $size-mobile { font-size: $size-mobile; }
+  @if $colour { color: $colour; } @else { color: currentColor; }
+  @if $weight { font-weight: $weight; } @else { font-weight: 300; }
+  @if $lh { line-height: $lh; } @else { line-height: normal; }
+  @if $size-tablet {
+    @include mq('tablet') {
+      font-size: $size-tablet;
+    }
+  }
+  @if $size-desktop {
+    @include mq('desktop') {
+      font-size: $size-desktop;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.swiper-container.swiper-tabs {
+  display: flex;
+
+  .swiper-slide {
+    width: auto;
+
+    &:first-child {
+      margin-left: $mobile-padding;
+    }
+  }
+
+  & .swiper-tabs__item {
+    display: inline-flex;
+    width: auto;
+    margin-right: 8px;
+
+    &.swiper-tabs__item--active {
+      .swiper-tabs__button {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  & .swiper-tabs__button {
+    @extend .button-clear;
+    @include font-source(16px, 20px, false, 400);
+    width: auto;
+    height: 40px;
+    padding: 4px 24px;
+    background-color: $color-gray-light;
+    border-radius: 40px;
+    border: 1px solid $color-gray-light;
+    transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  @include mq('tablet') {
+    .swiper-slide:first-child {
+      margin-left: $tablet-padding;
+    }
+
+    & .swiper-tabs__item {
+      margin-right: 16px;
+    }
+
+    & .swiper-tabs__button {
+      height: 56px;
+      padding: 8px 36px;
+    }
+  }
+
+  @include mq('desktop') {
+    .swiper-wrapper {
+      transform: none !important;
+    }
+
+    & .swiper-tabs__button:hover {
+      border-color: $color-yellow;
+    }
+  }
+
+}

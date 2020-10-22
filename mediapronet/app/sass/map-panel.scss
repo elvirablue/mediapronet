@@ -1,0 +1,93 @@
+.map-panel {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateX(-50%);
+  text-align: center;
+
+  &.map-panel--opened {
+    width: 100%;
+    height: 100%;
+    .map-panel__content {
+      display: flex;
+    }
+    .map-panel__toggle {
+      img, svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  & &__toggle {
+    position: relative;
+    z-index: 10;
+    @extend .button-clear;
+    min-width: 72px;
+    height: 32px;
+    margin: 8px 0;
+    font-size: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 24px;
+
+    img, svg {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  & &__content {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  & &__overlay {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+  & &__box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 32px $mobile-padding 64px;
+    color: #ffffff;
+    background-color: $color-purple;
+  }
+
+  @include mq('tablet') {
+    & &__toggle {
+      height: 40px;
+      margin: 16px 0;
+      padding: 8px 24px;
+      font-size: 16px;
+      border: 1px solid #ffffff;
+      transition: border-color 0.2s ease-in-out;
+
+      &:hover {
+        border-color: $color-yellow;
+      }
+
+      img, svg {
+        margin-right: 10px;
+      }
+    }
+
+    & &__box {
+      padding-bottom: 88px;
+    }
+  }
+}

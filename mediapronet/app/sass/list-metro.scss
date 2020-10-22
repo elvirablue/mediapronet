@@ -1,0 +1,18 @@
+.list-metro {
+  display: flex;
+  flex-direction: column;
+
+  & &__item {
+    display: inline-flex;
+    padding-bottom: 8px;
+  }
+
+  @include mq('tablet') {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & &__item {
+      padding-right: 32px;
+    }
+  }
+}

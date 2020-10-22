@@ -1,0 +1,12 @@
+.list-labels {
+  display: flex;
+  list-style: none;
+
+  & &__item {
+    display: inline-flex;
+
+    + .list-labels__item {
+      margin-left: -12px;
+    }
+  }
+}

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Mediapronet-Test</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+	<link	href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<header class="header">
+	<div class="header__content wrap">
+		<div class="header__logo">
+			<img src="img/logo.svg" alt="HEADLINER">
+		</div>
+		<div class="header__menu">
+			<nav class="menu">
+				<button class="menu__toggle" data-button-toggle-menu>
+					<img class="icon-open" src="img/menu.svg" alt="">
+					<img class="icon-close" src="img/close.svg" alt="">
+				</button>
+				<div class="menu__navigation animate__animated animate__fadeIn">
+					<ul class="navigation">
+						<li class="navigation__item navigation__item--active">
+							<a href="#sectionDescription" class="navigation__item-link">Описание</a>
+						</li>
+						<li class="navigation__item">
+							<a href="#sectionLocation" class="navigation__item-link">Локация</a>
+						</li>
+						<li class="navigation__item">
+							<a href="#sectionSeeAlso" class="navigation__item-link">Смотрите также</a>
+						</li>
+						<li class="navigation__item">
+							<a href="#sectionRegistrationForm" class="navigation__item-link">Запись на просмотр</a>
+						</li>
+
+					</ul>
+
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<section class="bg-color">
+	<div class="wrap">
+		<div class="first-screen">
+			<div class="first-screen__heading">
+				<div class="wrap__inner">
+					<h1 class="first-screen__title">Многофункциональный жилой квартал HEADLINER</h1>
+					<div class="first-screen__subtitle">Сдача — 4 кв. 2022, есть сданные</div>
+				</div>
+			</div>
+			<div class="first-screen__slider">
+				<!-- Slider -->
+				<div class="swiper-container swiper-main">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<div class="picture">
+								<img src="img/slider/slide1.jpg" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="picture">
+								<img src="img/slider/slide2.jpg" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="picture">
+								<img src="img/slider/slide1.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="sectionDescription">
+	<div class="wrap">
+		<div class="wrap__inner">
+			<div class="description">
+				<div class="description__tabs">
+					<!-- Slider -->
+					<div class="swiper-container swiper-tabs">
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<div class="swiper-tabs__item swiper-tabs__item--active">
+									<button class="swiper-tabs__button" data-tab-button data-call-content="1">Плюсы и минусы</button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-tabs__item">
+									<button class="swiper-tabs__button" data-tab-button data-call-content="2">Аэротур</button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-tabs__item">
+									<button class="swiper-tabs__button" data-tab-button data-call-content="3">Планировки</button>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="swiper-tabs__item">
+									<button class="swiper-tabs__button" data-tab-button data-call-content="4">Застройщик</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="description__content description__content--active" data-tab-content="1">
+					<div class="pros-cons">
+						<div class="pros-cons__item">
+							<ul class="list-specify list-specify--pros">
+								<li class="list-specify__item">Привлекательная архитектура</li>
+								<li class="list-specify__item">Большой выбор квартир</li>
+								<li class="list-specify__item">Поразительные виды из окон</li>
+								<li class="list-specify__item">Сложившийся район со всем необходимым</li>
+								<li class="list-specify__item">Сравнительно низкие цены</li>
+							</ul>
+						</div>
+						<div class="pros-cons__item">
+							<ul class="list-specify list-specify--cons">
+								<li class="list-specify__item">Недостаток собственной инфраструктуры</li>
+								<li class="list-specify__item">Частые пробки вокруг</li>
+								<li class="list-specify__item">Не лучшая экология</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="description__content" data-tab-content="2">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta dolorem ea eveniet, harum id illum in ipsam iste iure labore laudantium, molestiae nesciunt quidem quis quod ratione rerum velit?
+				</div>
+				<div class="description__content" data-tab-content="3">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti dicta dolorem ea eveniet, harum id illum in ipsam iste iure labore laudantium, molestiae nesciunt quidem quis quod ratione rerum velit?
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="bg-color">
+	<div class="wrap">
+		<div class="wrap__inner">
+			<div class="call-action">
+				<div class="call-action__title">
+					Запишитесь на просмотр и оцените всё сами!
+				</div>
+				<div class="call-action__action">
+					<a href="#sectionRegistrationForm" class="button">Запись на просмотр</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="sectionLocation">
+	<div class="wrap">
+		<div class="wrap__inner">
+			<div class="location">
+				<div class="location__title">
+					Локация
+				</div>
+				<div class="location__address">
+					Москва, ЦАО, Пресненский, Шмитовский проезд, вл. 39
+				</div>
+				<div class="location__metro">
+					<ul class="list-metro">
+						<li class="list-metro__item">
+							<div class="metro">
+								<span class="metro__color metro__color--msk-11"></span>
+								<button class="metro__name metro__name--link">Шелепиха</button>
+								<span class="metro__distance">5 мин пешком</span>
+							</div>
+						</li>
+						<li class="list-metro__item">
+							<div class="metro">
+								<span class="metro__color metro__color--msk-11"></span>
+								<button class="metro__name metro__name--link">Фили</button>
+								<span class="metro__distance">6 мин на транспорте</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="location__map">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abb82e1ee07f06c9b610679ec365b56e2cc501501101eb5ffc2c37b01db3c8796&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+					<div class="map-panel">
+						<button class="map-panel__toggle" data-button-toggle-map-panel>
+							<img src="img/arrow-up.svg">
+							Объекты инфраструктуры
+						</button>
+						<div class="map-panel__content">
+							<div class="map-panel__overlay">
+								<div class="map-panel__box">
+									<form class="form-map">
+										<div class="form-map__item">
+											<label class="checkbox">
+												<input type="checkbox" class="checkbox__field">
+												<span class="checkbox__box">
+													<img src="img/check.svg">
+												</span>
+												<span class="checkbox__label">Школы</span>
+											</label>
+										</div>
+										<div class="form-map__item">
+											<label class="checkbox">
+												<input type="checkbox" class="checkbox__field">
+												<span class="checkbox__box">
+													<img src="img/check.svg">
+												</span>
+												<span class="checkbox__label">Аптеки</span>
+											</label>
+										</div>
+										<div class="form-map__item">
+											<label class="checkbox">
+												<input type="checkbox" class="checkbox__field">
+												<span class="checkbox__box">
+													<img src="img/check.svg">
+												</span>
+												<span class="checkbox__label">Высшие учебные заведения учебные заведения</span>
+											</label>
+										</div>
+										<div class="form-map__item">
+											<label class="checkbox">
+												<input type="checkbox" class="checkbox__field">
+												<span class="checkbox__box">
+													<img src="img/check.svg">
+												</span>
+												<span class="checkbox__label">Больницы</span>
+											</label>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="remove-margin"></section>
+
+<section id="sectionSeeAlso">
+	<div class="wrap">
+		<div class="wrap__inner">
+			<div class="offers">
+				<div class="offers__title">
+					Смотрите также
+				</div>
+				<div class="offers__content">
+					<ul class="list-offers">
+						<li class="list-offers__item">
+							<div class="card-offer">
+								<div class="card-offer__labels">
+									<ul class="list-labels">
+										<li class="list-labels__item">
+											<div class="accent accent--premium">
+												<span class="accent__icon">
+													<img src="img/label-premium.svg" alt="">
+												</span>
+											</div>
+										</li>
+										<li class="list-labels__item">
+											<div class="accent accent--speed">
+												<span class="accent__icon">
+													<img src="img/label-speed.svg" alt="">
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<figure class="card-offer__figure">
+									<div class="picture">
+										<img src="img/offers/offer1.jpg">
+									</div>
+									<figcaption class="card-offer__caption">
+										<span class="card-offer__price">8 217 030 - 29 070 951₽</span>
+										<span>569 квартир в продаже</span>
+									</figcaption>
+								</figure>
+								<a href="#" class="card-offer__title">
+									ЖК «Level Стрешнево» (Левел Стрешнево)
+								</a>
+								<div class="card-offer__address">
+									Москва, СВАО
+								</div>
+								<div class="card-offer__metro">
+									<div class="metro metro--small">
+										<span class="metro__color metro__color--msk-6"></span>
+										<span class="metro__name">Алексеевская</span>
+										<span class="metro__distance metro__distance--icon-walk">5 мин</span>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-offers__item">
+							<div class="card-offer">
+								<div class="card-offer__labels">
+									<ul class="list-labels">
+										<li class="list-labels__item">
+											<div class="accent accent--sale">
+												<span class="accent__icon">
+													<img src="img/label-sale.svg">
+												</span>
+												<span class="accent__description">Ну ооочень большая скидка!</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<figure class="card-offer__figure">
+									<div class="picture">
+										<img src="img/offers/offer2.jpg">
+									</div>
+									<figcaption class="card-offer__caption">
+										<span class="card-offer__price">8 217 030 - 29 070 951₽</span>
+										<span>569 квартир в продаже</span>
+									</figcaption>
+								</figure>
+								<a href="#" class="card-offer__title">
+									ЖК «Level Стрешнево» (Левел Стрешнево)
+								</a>
+								<div class="card-offer__address">
+									Москва, СВАО
+								</div>
+								<div class="card-offer__metro">
+									<div class="metro metro--small">
+										<span class="metro__color metro__color--msk-6"></span>
+										<span class="metro__name">Алексеевская</span>
+										<span class="metro__distance metro__distance--icon-walk">5 мин</span>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-offers__item">
+							<div class="card-offer">
+								<div class="card-offer__labels">
+									<ul class="list-labels">
+										<li class="list-labels__item">
+											<div class="accent accent--premium">
+												<span class="accent__icon">
+													<img src="img/label-premium.svg" alt="">
+												</span>
+											</div>
+										</li>
+										<li class="list-labels__item">
+											<div class="accent accent--speed">
+												<span class="accent__icon">
+													<img src="img/label-speed.svg" alt="">
+												</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<figure class="card-offer__figure">
+									<div class="picture">
+										<img src="img/offers/offer1.jpg">
+									</div>
+									<figcaption class="card-offer__caption">
+										<span class="card-offer__price">8 217 030 - 29 070 951₽</span>
+										<span>569 квартир в продаже</span>
+									</figcaption>
+								</figure>
+								<a href="#" class="card-offer__title">
+									ЖК «Level Стрешнево» (Левел Стрешнево)
+								</a>
+								<div class="card-offer__address">
+									Москва, СВАО
+								</div>
+								<div class="card-offer__metro">
+									<div class="metro metro--small">
+										<span class="metro__color metro__color--msk-6"></span>
+										<span class="metro__name">Алексеевская</span>
+										<span class="metro__distance metro__distance--icon-walk">5 мин</span>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li class="list-offers__item">
+							<div class="card-offer">
+								<div class="card-offer__labels">
+									<ul class="list-labels">
+										<li class="list-labels__item">
+											<div class="accent accent--sale">
+												<span class="accent__icon">
+													<img src="img/label-sale.svg">
+												</span>
+												<span class="accent__description">Ну ооочень большая скидка!</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<figure class="card-offer__figure">
+									<div class="picture">
+										<img src="img/offers/offer2.jpg">
+									</div>
+									<figcaption class="card-offer__caption">
+										<span class="card-offer__price">8 217 030 - 29 070 951₽</span>
+										<span>569 квартир в продаже</span>
+									</figcaption>
+								</figure>
+								<a href="#" class="card-offer__title">
+									ЖК «Level Стрешнево» (Левел Стрешнево)
+								</a>
+								<div class="card-offer__address">
+									Москва, СВАО
+								</div>
+								<div class="card-offer__metro">
+									<div class="metro metro--small">
+										<span class="metro__color metro__color--msk-6"></span>
+										<span class="metro__name">Алексеевская</span>
+										<span class="metro__distance metro__distance--icon-walk">5 мин</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="sectionRegistrationForm" class="bg-color">
+	<div style="height: 300px"></div>
+</section>
+
+<footer class="footer"></footer>
+
+
+<!-- JS -->
+<script src="js/script.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/slider.js"></script>
+</body>
+</html>

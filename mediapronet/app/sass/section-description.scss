@@ -1,0 +1,33 @@
+.description {
+  & &__tabs {
+    display: block;
+    margin: 0 (-$mobile-padding);
+    overflow-x: auto;
+  }
+
+  & &__content {
+    display: none;
+    padding: 16px 0;
+
+    &.description__content--active {
+      display: block;
+    }
+  }
+
+  @include mq('tablet') {
+    & &__tabs {
+      margin: 0 (-$tablet-padding);
+    }
+
+    & &__content {
+      padding-top: 24px;
+      padding-bottom: 0;
+    }
+  }
+
+  @include mq('desktop') {
+    & &__content {
+      padding-top: 36px;
+    }
+  }
+}

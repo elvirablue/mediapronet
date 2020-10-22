@@ -1,0 +1,61 @@
+$color-accent: (
+  'premium': #EE4713,
+  'speed': #774AA3,
+  'sale': #FC822A,
+);
+
+.accent {
+  position: relative;
+
+  & &__icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  & &__description {
+    display: none;
+  }
+
+  @each $name, $color in $color-accent {
+    &.accent--#{$name} {
+      .accent__icon {
+        background-color: $color;
+      }
+    }
+  }
+
+  @include mq('tablet') {
+    & &__description {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 32px;
+      max-width: 200px;
+      height: 32px;
+      padding: 9px 0 7px 0;
+      white-space: nowrap;
+      @include font-source(12px, false, false, 300, #ffffff);
+      border-radius: 24px;
+      background-color: rgba(0,0,0,0.4);
+      opacity: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:hover {
+      & .accent__description {
+        opacity: 1;
+        width: auto;
+        padding-right: 16px;
+        padding-left: 40px;
+      }
+    }
+  }
+}

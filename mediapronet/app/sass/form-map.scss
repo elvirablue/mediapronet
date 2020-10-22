@@ -1,0 +1,26 @@
+.form-map {
+  display: block;
+  text-align: left;
+  max-height: 100%;
+  overflow-y: auto;
+
+  & &__item {
+    padding-bottom: 8px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  @include mq('tablet') {
+    & &__item {
+      padding-bottom: 12px;
+    }
+  }
+
+  @include mq('desktop') {
+    & &__item {
+      padding-bottom: 20px;
+    }
+  }
+}

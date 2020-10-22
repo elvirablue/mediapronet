@@ -1,0 +1,38 @@
+.location {
+  & &__title {
+    @extend .sections-heading;
+  }
+
+  & &__address {
+    line-height: 1.5;
+    padding-bottom: 16px;
+  }
+
+  & &__metro {
+    padding-bottom: 24px;
+  }
+
+  & &__map {
+    position: relative;
+    display: block;
+    margin: 0 (-$mobile-padding);
+    height: 262px;
+  }
+
+  @include mq('tablet') {
+    & &__metro {
+      padding-bottom: 16px;
+    }
+
+    & &__map {
+      margin: 0 (-$tablet-padding);
+      height: 408px;
+    }
+  }
+
+  @include mq('desktop') {
+    & &__map {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.menu {
+  position: relative;
+  display: flex;
+  height: $mobile-menu-height;
+
+  & &__toggle {
+    @extend .button-clear;
+    width: 32px;
+    height: 32px;
+    margin: auto 0;
+    font-size: 0;
+  }
+
+  .icon-open {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon-close {
+    display: none;
+    width: 22px;
+    height: 22px;
+  }
+
+  & &__navigation {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% - 1px);
+    right: -$mobile-padding;
+    display: none;
+    width: 100vw;
+    background-color: $color-purple-dark;
+
+    --animate-duration: 0.5s;
+  }
+
+  &--opened {
+    .menu__toggle {
+      background-color: $color-yellow;
+    }
+
+    .icon-open {
+      display: none;
+    }
+
+    .icon-close {
+      display: block;
+    }
+
+    .menu__navigation {
+      display: block;
+    }
+  }
+
+
+  @include mq('tablet') {
+    height: $tablet-menu-height;
+
+    & &__toggle {
+      display: none;
+    }
+
+    & &__navigation {
+      position: static;
+      display: flex;
+      width: 100%;
+      background-color: transparent;
+      animation: none;
+    }
+  }
+}

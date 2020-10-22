@@ -1,0 +1,57 @@
+.list-specify {
+  display: block;
+  list-style: none;
+
+  & &__item {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 6px;
+    padding-bottom: 16px;
+    @include font-source(14px, 24px, false, 400);
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &:before {
+      content: '';
+      display: inline-flex;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      margin-right: 16px;
+      margin-top: -6px;
+      border-radius: 50%;
+      background-color: $color-yellow;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &.list-specify--pros {
+    .list-specify__item:before {
+      background-image: url("../img/icon-positive.svg");
+    }
+  }
+
+  &.list-specify--cons {
+    .list-specify__item {
+      color: $color-gray-opacity;
+      &:before {
+        background-image: url("../img/icon-negative.svg");
+      }
+    }
+  }
+
+  @include mq('tablet') {
+    & &__item {
+      padding-top: 2px;
+      padding-bottom: 24px;
+
+      &:before {
+        margin-right: 24px;
+        margin-top: -2px;
+      }
+    }
+  }
+}

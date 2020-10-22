@@ -1,0 +1,83 @@
+$color-metro-msk: (
+  1: #EF161E,
+  2: #2DBE2C,
+  3: #0078BE,
+  4: #00BFFF,
+  5: #8D5B2D,
+  6: #ED9121,
+  7: #800080,
+  8: #FFD702,
+  9: #999999,
+  10: #99CC00,
+  11: #82C0C0,
+  12: #A1B3D4,
+  13: #9999FF,
+);
+
+.metro {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+
+  & &__color {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+    border-radius: 50%;
+    background-color: transparent;
+
+    @each $name, $color in $color-metro-msk {
+      &.metro__color--msk-#{$name} {
+        background-color: $color;
+      }
+    }
+  }
+
+  & &__name {
+    display: block;
+    line-height: 1.5;
+
+    &.metro__name--link {
+      @extend .button-clear;
+      color: $color-purple;
+      border-bottom: 1px dashed currentColor;
+      transition: border-color 0.2s ease-in-out;
+      cursor: pointer;
+    }
+  }
+
+  & &__distance {
+    margin-left: 16px;
+    color: $color-gray-opacity;
+
+    &.metro__distance--icon-walk {
+      margin-left: 2px;
+      padding-left: 18px;
+      background-image: url("../img/icon-distance-metro.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+  }
+
+  &.metro--small {
+    font-size: 14px;
+    & .metro__color {
+      width: 8px;
+      height: 8px;
+      margin-right: 8px;
+    }
+
+    & .metro__name {
+
+    }
+  }
+
+  @include mq('tablet') {
+    & &__name {
+      &.metro__name--link:hover {
+        border-color: transparent;
+      }
+    }
+  }
+}
